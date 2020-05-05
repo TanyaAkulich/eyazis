@@ -63,6 +63,14 @@ def process():
                     if int(word[1]) < int(count_errors) + 1:
                         list_box.insert(0, str(word[0]) + ' ' + str(word[1]))
 
+def info():
+    messagebox.askquestion(
+        "Help",
+        "1. Открыть файл с правильными словами\n"
+        "2. Ввести неправильное слово\n"
+        "3. Ввести количество допустимых ошибок\n", type='ok')
+
+
 # GUI configuration
 root = Tk()
 root.title("Lab 2")
@@ -88,4 +96,6 @@ scrollbar = Scrollbar(root, command=list_box.yview)
 scrollbar.grid(row=4, column=4, sticky='nsew')
 list_box.grid(row=4, column=0, sticky='nsew', columnspan=3)
 list_box.configure(yscrollcommand=scrollbar.set)
+helpButton = Button(root, text="Help", command=info, highlightbackground='grey')
+helpButton.grid(row=5, column=1, sticky='nsew')
 root.mainloop()
