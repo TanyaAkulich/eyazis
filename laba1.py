@@ -2,6 +2,7 @@
 import spacy
 from tkinter import *
 import tkinter.ttk as ttk
+import pry
 
 # Core logic
 def fetch_form_from_the_dict(dict, lemma):
@@ -43,7 +44,7 @@ vocabulary = []
 emptyFrame = Frame(root, bd=5, height=30)
 inputFrame = Frame(root, bd=2)
 inputText = Text(inputFrame, height=10, width=130)
-createDictionaryButton = Button(inputFrame, text='Create vocabulary from text', width=100, height=2, highlightbackground='grey')
+createDictionaryButton = Button(inputFrame, text='Create vocabulary from text', width=120, height=2, highlightbackground='grey')
 
 vocabularyFrame = Frame(root, bd=2)
 vocabularyTree = ttk.Treeview(vocabularyFrame, columns=("Lemma", "Word form", "Tags"), selectmode='browse',height=11)
