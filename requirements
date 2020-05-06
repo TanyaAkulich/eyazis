@@ -1,3 +1,5 @@
 spacy
 tkinter
-pyquery
+operator
+HTMLParser
+functools
