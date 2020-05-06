@@ -3,3 +3,4 @@ tkinter
 operator
 HTMLParser
 functools
+PyQuery

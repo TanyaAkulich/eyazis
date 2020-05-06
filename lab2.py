@@ -5,7 +5,7 @@ from tkinter import messagebox
 from html.parser import HTMLParser
 import operator
 from functools import reduce
-import pry
+from pyquery import PyQuery
 
 file_name = ''
 all_words = []
