@@ -4,3 +4,5 @@ operator
 HTMLParser
 functools
 PyQuery
+pdfminer.high_level
+nltk

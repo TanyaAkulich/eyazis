@@ -1,3 +1,4 @@
+# Imports
 import nltk
 import pry
 import pdfminer.high_level
@@ -19,6 +20,7 @@ GRAMMAR_RULES = r"""
         VP: {<VP><PP>}
         """
 
+# Core logic
 def open_pdf_file():
     file_name = fd.askopenfilename(filetypes=(("Pdf files", "*.pdf"),))
     if file_name != '':
@@ -28,9 +30,10 @@ def open_pdf_file():
         pdf_file_object.close()
 
 def info():
-    messagebox.askquestion("Help", "1. Input text or open PDF file.\n"
-                                   "2. Send button 'Ok'.\n"
-                                   "3. Look at the result tree.", type='ok')
+    messagebox.askquestion(
+        "Help",
+        "1. Открыть PDF-файл или ввести текст\n"
+        "2. Нажать 'Ok'\n", type='ok')
 
 def download_nltk_dependecies():
     nltk.download('punkt')
@@ -51,7 +54,7 @@ def draw_tree():
         result = cp.parse(new_doc)
         result.draw()
 
-
+# GUI configuration
 root = Tk()
 root.title("Lab 3")
 root.configure(bg='grey')
