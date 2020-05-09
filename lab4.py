@@ -10,9 +10,10 @@ from tkinter import filedialog as fd
 
 
 def info():
-    messagebox.askquestion("Help", "1. Input one word or open PDF file with one word.\n"
-                                   "2. Send button 'Ok'.\n"
-                                   "3. Look at the information.", type='ok')
+    messagebox.askquestion(
+        "Help",
+        "1. Открыть PDF-файл или ввести текст\n"
+        "2. Нажать 'Ok'\n", type='ok')
 
 
 def open_pdf_file():

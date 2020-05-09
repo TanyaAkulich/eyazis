@@ -6,3 +6,5 @@ functools
 PyQuery
 pdfminer.high_level
 nltk
+wordcloud
+matplotlib
